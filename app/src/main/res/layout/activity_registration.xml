@@ -8,7 +8,7 @@
     tools:context="co.example.um2.aigle.alo.RegistrationActivity">
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/prenom"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
@@ -24,10 +24,10 @@
         android:textSize="16dp" />
 
     <EditText
-        android:id="@+id/etFName"
+        android:id="@+id/nom"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_below="@+id/etName"
+        android:layout_below="@+id/prenom"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:background="#11000000"
@@ -40,12 +40,12 @@
         android:textSize="16dp" />
 
     <EditText
-        android:id="@+id/etUser"
+        android:id="@+id/pseudo"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_alignEnd="@+id/etFName"
-        android:layout_alignRight="@+id/etFName"
-        android:layout_below="@+id/etFName"
+        android:layout_alignEnd="@+id/nom"
+        android:layout_alignRight="@+id/nom"
+        android:layout_below="@+id/nom"
         android:layout_marginTop="25dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_user"
@@ -57,12 +57,12 @@
         android:textSize="16dp" />
 
     <EditText
-        android:id="@+id/etMail"
+        android:id="@+id/mail"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_alignLeft="@+id/etUser"
-        android:layout_alignStart="@+id/etUser"
-        android:layout_below="@+id/etUser"
+        android:layout_alignLeft="@+id/nom"
+        android:layout_alignStart="@+id/nom"
+        android:layout_below="@+id/pseudo"
         android:layout_marginTop="25dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_mail"
@@ -73,12 +73,12 @@
         android:textSize="16dp" />
 
     <EditText
-        android:id="@+id/etPhone"
+        android:id="@+id/telephone"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_alignEnd="@+id/etMail"
-        android:layout_alignRight="@+id/etMail"
-        android:layout_below="@+id/etMail"
+        android:layout_alignEnd="@+id/nom"
+        android:layout_alignRight="@+id/nom"
+        android:layout_below="@+id/mail"
         android:layout_marginTop="25dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_phone"
@@ -90,12 +90,12 @@
         android:textSize="16dp" />
 
     <EditText
-        android:id="@+id/etPass"
+        android:id="@+id/motdepasse"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_alignLeft="@+id/etPhone"
-        android:layout_alignStart="@+id/etPhone"
-        android:layout_below="@+id/etPhone"
+        android:layout_alignLeft="@+id/telephone"
+        android:layout_alignStart="@+id/telephone"
+        android:layout_below="@+id/telephone"
         android:layout_marginTop="25dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_pass"
@@ -107,12 +107,12 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/etPassConf"
+        android:id="@+id/motdepasseconfirmation"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_alignEnd="@+id/etPass"
-        android:layout_alignRight="@+id/etPass"
-        android:layout_below="@+id/etPass"
+        android:layout_alignEnd="@+id/motdepasse"
+        android:layout_alignRight="@+id/motdepasse"
+        android:layout_below="@+id/motdepasse"
         android:layout_marginTop="25dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_pass"
@@ -124,22 +124,22 @@
         android:inputType="textPassword" />
 
     <android.support.v7.widget.CardView
+        android:onClick="subscribe"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/etPassConf"
+        android:layout_below="@+id/motdepasseconfirmation"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
         app:cardBackgroundColor="@color/colorAccent"
         android:elevation="10dp"
         app:cardCornerRadius="15dp"
-        android:id="@+id/cardView2">
+        android:id="@+id/goRegister">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Register"
@@ -149,16 +149,16 @@
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Login"
-        android:textColor="#fff"
-        android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/goLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Login"
+            android:textColor="#fff"
+            android:textSize="14dp"/>
 
 
 </RelativeLayout>

@@ -19,6 +19,5 @@ public class MainActivity extends AppCompatActivity {
     public void regBtn(View v){
         Intent i = new Intent(this, RegistrationActivity.class);
         startActivity(i);
-
     }
 }

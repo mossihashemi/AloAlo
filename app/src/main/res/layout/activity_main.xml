@@ -85,7 +85,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/cardView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="19dp"
+        android:onClick="regBtn"
         android:text="Register Here."
         android:textColor="#fff"
         android:textSize="14sp" />

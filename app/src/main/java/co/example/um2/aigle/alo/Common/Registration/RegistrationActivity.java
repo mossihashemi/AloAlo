@@ -1,8 +1,7 @@
-package co.example.um2.aigle.alo;
+package co.example.um2.aigle.alo.Common.Registration;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +11,9 @@ import android.widget.EditText;
 
 import java.util.concurrent.ExecutionException;
 
-import javax.xml.transform.Result;
+import co.example.um2.aigle.alo.Common.Registration.RegistrationTask;
+import co.example.um2.aigle.alo.MainActivity;
+import co.example.um2.aigle.alo.R;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -116,6 +117,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 alert.show();
             }
         }
+    }
+
+    public void goLogin(View v){
+        Intent intent = new Intent(this , MainActivity.class);
+        startActivity(intent);
     }
 
     /* Methode utilisée pour valider les adresse email*/

@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/lunch_logo" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/pseudo"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_below="@+id/imageView7"
@@ -36,12 +36,12 @@
         android:textSize="16dp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/motdepasse"
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3"
-        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/pseudo"
+        android:layout_alignStart="@+id/pseudo"
+        android:layout_below="@+id/pseudo"
         android:layout_marginTop="30dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_name"
@@ -54,9 +54,12 @@
         android:textSize="16dp" />
 
     <android.support.v7.widget.CardView
-        android:layout_width="250dp"
+        android:onClick="login"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/motdepasse"
+        android:layout_alignRight="@id/motdepasse"
         android:layout_height="40dp"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/motdepasse"
         android:layout_centerHorizontal="true"
         app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="15dp"
@@ -69,7 +72,6 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -80,7 +82,6 @@
     </android.support.v7.widget.CardView>
 
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cardView"

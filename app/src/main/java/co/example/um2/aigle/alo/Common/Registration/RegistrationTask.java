@@ -1,4 +1,4 @@
-package co.example.um2.aigle.alo;
+package co.example.um2.aigle.alo.Common.Registration;
 
 import android.content.Context;
 import android.os.AsyncTask;

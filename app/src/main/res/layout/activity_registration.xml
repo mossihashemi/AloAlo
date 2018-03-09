@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context="co.example.um2.aigle.alo.RegistrationActivity">
+    tools:context="co.example.um2.aigle.alo.Common.Registration.RegistrationActivity">
 
     <EditText
         android:id="@+id/prenom"
@@ -150,7 +150,7 @@
     </android.support.v7.widget.CardView>
 
         <TextView
-            android:id="@+id/goLogin"
+            android:onClick="goLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/goRegister"

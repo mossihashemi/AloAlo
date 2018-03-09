@@ -84,7 +84,7 @@
         android:drawableLeft="@drawable/ic_action_phone"
         android:ems="10"
         android:hint="Phone number"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:textColor="#fff"
         android:textColorHint="#7affffff"
         android:textSize="16dp" />

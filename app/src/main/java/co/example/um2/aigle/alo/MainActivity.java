@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             String[] datas = {};
 
             try{
-                //Les données ici sont reçues ligne par ligne du fichier php où chaque ligne représente une donnée est suivie par \n
+                ///Les données ici sont reçues ligne par ligne du fichier php où chaque ligne représente une donnée est suivie par \n
                 datas = response.split("\n");
                 //Suite des tests
         /*

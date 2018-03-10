@@ -22,6 +22,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.concurrent.ExecutionException;
 
+import co.example.um2.aigle.alo.Common.Configuration.ConfiguratoinActivity;
 import co.example.um2.aigle.alo.Common.Registration.RegistrationActivity;
 import co.example.um2.aigle.alo.Common.Welcome.WelcomeActivity;
 
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             /*Définition de l'aynctask pour la requete HTTP de login*/
             AsyncTask<String, Void, String> asyncTask = new AsyncTask<String, Void, String>() {
 
-            private String path = "http://127.0.0.1:8089/bda-access/Login.php";
+            private String path = "https://quickandfresh.000webhostapp.com/Login.php";
             private String pseudo = "";
             private String motdepasse = "";
 
@@ -149,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();*/
 
-                Intent intent = new Intent(v.getContext(), WelcomeActivity.class);
+                Intent intent = new Intent(v.getContext(), ConfiguratoinActivity.class);
                 intent.putExtra("nom", datas[1]);
                 intent.putExtra("prenom", datas[2]);
                 intent.putExtra("pseudo", datas[3]);

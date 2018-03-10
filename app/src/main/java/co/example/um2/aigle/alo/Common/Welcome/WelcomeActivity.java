@@ -1,5 +1,6 @@
 package co.example.um2.aigle.alo.Common.Welcome;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -19,14 +20,22 @@ public class WelcomeActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textview);
         String message;
 
-        /* Bundle extras permet de récupérer les données envoyées par une autre activité via les putString vérifier MainActivity.login()*/
-        Bundle extras = getIntent().getExtras();
-        if(extras == null){
-            message = null;
-        }else{
-            message = "Welcome " + extras.getString("nom") + " " + extras.getString("prenom")
-                    + " \n Your email is : " + extras.getString("mail");
-        }
+        SharedPreferences sharedPreferences = getSharedPreferences("AloAloPreferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
+            message = "Welcome ";
+            if(!sharedPreferences.getString("nom", "").toString().equals("empty")){
+                message += sharedPreferences.getString("nom", "???");
+                if(!sharedPreferences.getString("prenom", "").toString().equals("empty")){
+                    message += " " +sharedPreferences.getString("prenom", "???");
+                }
+            }else if(!sharedPreferences.getString("prenom", "").toString().equals("empty")){
+                message += sharedPreferences.getString("prenom", "???");
+            }else{
+                message += sharedPreferences.getString("pseudo", "???");
+            }
+
         textView.setText(message);
     }
 }

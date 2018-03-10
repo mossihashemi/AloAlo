@@ -20,8 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Common.Registration.RegistrationActivity" />
-        <activity android:name=".Common.Welcome.WelcomeActivity"></activity>
+        <activity android:name=".Common.Registration.RegistrationActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Common.Welcome.WelcomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Common.Configuration.ConfiguratoinActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

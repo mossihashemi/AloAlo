@@ -48,7 +48,7 @@ public class RegistrationTask extends AsyncTask<String, Void, String> {
 
         result = "";
 
-        String path = "http://127.0.0.1:8089/bda-access/Registration.php";
+        String path = "https://quickandfresh.000webhostapp.com/Registration.php";
 
         try {
             URL url = new URL(path);

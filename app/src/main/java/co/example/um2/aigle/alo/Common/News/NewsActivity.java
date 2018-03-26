@@ -137,27 +137,9 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
                 loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
-            case R.id.jardinetmaison :
-                this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
-                this.stringBuilder.append("http://jardin-et-maison.fr/feed/rss.html");
-                loadRss(stringBuilder.toString());
-                drawerLayout.closeDrawers();
-                return true;
             case R.id.azurever :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("https://www.azurever.com/rss.xml");
-                loadRss(stringBuilder.toString());
-                drawerLayout.closeDrawers();
-                return true;
-            case R.id.bravepatrie :
-                this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
-                this.stringBuilder.append("http://www.facteur-info.com/annuaire-rss/R_53-flux-rss-bravepatrie.html");
-                loadRss(stringBuilder.toString());
-                drawerLayout.closeDrawers();
-                return true;
-            case R.id.facteurinfo :
-                this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
-                this.stringBuilder.append("http://www.facteur-info.com/annuaire-rss/R_56-flux-rss-3dvf.html");
                 loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;

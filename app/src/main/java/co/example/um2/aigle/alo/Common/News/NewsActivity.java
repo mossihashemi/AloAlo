@@ -66,13 +66,13 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         this.stringBuilder.append(RSS_LINK_HOME);
-        loadRss(this.getBaseContext(), this.stringBuilder.toString());
+        loadRss(this.stringBuilder.toString());
     }
 
-    private void loadRss(final Context context, String the_url) {
+    private void loadRss(String the_url) {
         AsyncTask<String , String , String > loadRSSAsync = new AsyncTask<String, String, String>() {
 
-            ProgressDialog mDialog = new ProgressDialog(context);
+            ProgressDialog mDialog = new ProgressDialog(NewsActivity.this);
 
             @Override
             protected void onPreExecute() {
@@ -116,7 +116,7 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if(item.getItemId() == R.id.menu_refresh)
-            loadRss(getBaseContext(), this.stringBuilder.toString());
+            loadRss(this.stringBuilder.toString());
         return super.onOptionsItemSelected(item);
 
     }
@@ -128,61 +128,43 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
             case R.id.vingtminutes :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("https://www.20minutes.fr/feeds/rss-actu-france.xml");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.lemonde :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("http://www.lemonde.fr/rss/une.xml");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
-                drawerLayout.closeDrawers();
-                return true;
-            case R.id.jardinetmaison :
-                this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
-                this.stringBuilder.append("http://jardin-et-maison.fr/feed/rss.html");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.azurever :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("https://www.azurever.com/rss.xml");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
-                drawerLayout.closeDrawers();
-                return true;
-            case R.id.bravepatrie :
-                this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
-                this.stringBuilder.append("http://www.facteur-info.com/annuaire-rss/R_53-flux-rss-bravepatrie.html");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
-                drawerLayout.closeDrawers();
-                return true;
-            case R.id.facteurinfo :
-                this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
-                this.stringBuilder.append("http://www.facteur-info.com/annuaire-rss/R_56-flux-rss-3dvf.html");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.yashinotraduction :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("http://www.yoshinotrad.fr/blog/feed");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.abimeconcept :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("http://www.abime-concept.com/blog/feed/");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.lachainemeteo :
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("http://actualite.lachainemeteo.com/meteo-rss/toute-l-actualite-meteo.xml");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.commerce:
                 this.stringBuilder = new StringBuilder(RSS_TO_JSON_API);
                 this.stringBuilder.append("https://lbc2rss.superfetatoire.com/rss/74293-test-annonces-languedoc-roussillon");
-                loadRss(this.getBaseContext(), stringBuilder.toString());
+                loadRss(stringBuilder.toString());
                 drawerLayout.closeDrawers();
                 return true;
         }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item android:title="Le monde" android:id="@+id/lemonde">
 
     </item>
@@ -9,19 +8,7 @@
 
     </item>
 
-    <item android:title="Jardin et Maison" android:id="@+id/jardinetmaison">
-
-    </item>
-
     <item android:title="Azurever" android:id="@+id/azurever">
-
-    </item>
-
-    <item android:title="Brave Patrie" android:id="@+id/bravepatrie">
-
-    </item>
-
-    <item android:title="Facteur Info" android:id="@+id/facteurinfo">
 
     </item>
 

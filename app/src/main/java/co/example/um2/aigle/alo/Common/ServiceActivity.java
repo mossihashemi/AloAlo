@@ -30,5 +30,6 @@ public class ServiceActivity extends AppCompatActivity {
 
     public void goCommerce(View v){
         Intent intent = new Intent(v.getContext(), CommerceActivity.class);
+        startActivity(intent);
     }
 }

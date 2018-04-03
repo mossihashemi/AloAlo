@@ -32,9 +32,11 @@
         <activity
             android:name=".Common.ServiceActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ThemeService"></activity>
-        <activity android:name=".Common.News.NewsActivity"
-            android:screenOrientation="portrait"></activity>
+            android:theme="@style/ThemeService" />
+        <activity
+            android:name=".Common.News.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Common.Commerce.CommerceActivity"></activity>
     </application>
 
 </manifest>

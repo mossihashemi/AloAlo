@@ -62,10 +62,12 @@ Activez votre localisation pour éviter toute erreur"
 
 
     <Button
+        android:id="@+id/buttonVendre"
         android:layout_marginTop="20dp"
         android:text="Mettre en ventre"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="miseEnVente"/>
 
 
 </LinearLayout>

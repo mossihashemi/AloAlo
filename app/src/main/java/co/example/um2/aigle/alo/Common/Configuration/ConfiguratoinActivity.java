@@ -103,6 +103,7 @@ public class ConfiguratoinActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putStringSet("preferences", new HashSet<String>(strings));
+        editor.putString("id", extras.getString("id"));
         editor.putString("nom", extras.getString("nom"));
         editor.putString("prenom", extras.getString("prenom"));
         editor.putString("pseudo", extras.getString("pseudo"));

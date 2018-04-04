@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();*/
 
                 Intent intent = new Intent(v.getContext(), ConfiguratoinActivity.class);
+                intent.putExtra("id", datas[0]);
                 intent.putExtra("nom", datas[1]);
                 intent.putExtra("prenom", datas[2]);
                 intent.putExtra("pseudo", datas[3]);
